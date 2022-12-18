@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="im_common_spit_width">0.5dp</dimen>
+
+    <dimen name="im_keyboard_toolbar_width_56">56dp</dimen>
+    <dimen name="im_keyboard_bar_height">32dp</dimen>
+    <dimen name="im_keyboard_indicator_margin">10dp</dimen>
+
+    <dimen name="im_item_emoticon_size">32dp</dimen>
+</resources>

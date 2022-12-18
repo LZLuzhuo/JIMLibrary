@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/im_list_zone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/core_colorForeground"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/im_list_header"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/im_default" />
+
+    <TextView
+        android:id="@+id/im_list_unread"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:background="@drawable/im_shape_point_read"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/im_list_header"
+        app:layout_constraintEnd_toEndOf="@+id/im_list_header"
+        app:layout_constraintStart_toEndOf="@+id/im_list_header"
+        app:layout_constraintTop_toTopOf="@+id/im_list_header"
+        tools:text="99"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/im_list_nickname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:singleLine="true"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/im_list_last_time"
+        app:layout_constraintStart_toEndOf="@+id/im_list_header"
+        app:layout_constraintTop_toTopOf="@+id/im_list_header"
+        tools:text="昵称昵称" />
+
+    <TextView
+        android:id="@+id/im_list_last_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:singleLine="true"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/im_list_header"
+        app:layout_constraintEnd_toEndOf="@+id/im_list_nickname"
+        app:layout_constraintStart_toEndOf="@+id/im_list_header"
+        tools:text="内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" />
+
+    <TextView
+        android:id="@+id/im_list_last_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/im_list_nickname"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="9:36" />
+
+    <include
+        layout="@layout/im_common_horizontal_line"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

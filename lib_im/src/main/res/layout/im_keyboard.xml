@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/im_common_horizontal_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <!-- 语音/文字切换 -->
+        <ImageView
+            android:id="@+id/btn_voice_or_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/im_btn_keyboard_voice_or_text" />
+
+        <!-- 语音输入 按钮 -->
+        <me.luzhuo.lib_im.ui.weight.RecordVoiceButton
+            android:id="@+id/btn_voice"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toLeftOf="@+id/rl_multi_and_send"
+            android:layout_toRightOf="@+id/btn_voice_or_text"
+            android:background="@drawable/im_btn_keyboard_voice"
+            android:gravity="center"
+            android:text="@string/im_keyboard_btn_text_speak"
+            android:textColor="#727272"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rl_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toLeftOf="@+id/rl_multi_and_send"
+            android:layout_toRightOf="@+id/btn_voice_or_text"
+            android:background="@drawable/im_shap_keyboard_edit_bg"
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <!-- 输入框 -->
+            <me.luzhuo.lib_im.ui.weight.EmoticonsEditText
+                android:id="@+id/et_chat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_toLeftOf="@+id/btn_face"
+                android:background="@null"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="说点什么呢~"
+                android:lineSpacingExtra="4dp"
+                android:maxLines="4"
+                android:textColorHint="#777777"
+                android:textSize="16sp" />
+
+            <!-- 表情 -->
+            <ImageView
+                android:id="@+id/btn_face"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="8dp"
+                android:src="@mipmap/im_keyboard_icon_face_nomal" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_multi_and_send"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal">
+
+            <!-- apps 功能 -->
+            <ImageView
+                android:id="@+id/btn_multimedia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="14dp"
+                android:src="@drawable/im_btn_keyboard_multi_bg" />
+
+            <!-- 发送 -->
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginRight="9dp"
+                android:background="#FFC000"
+                android:text="@string/im_keyboard_btn_send"
+                android:textColor="@color/im_keyboard_send_btn_textcolor_FFFFFF"
+                android:textSize="16sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- 功能页 -->
+    <me.luzhuo.lib_im.ui.layout.func.FuncLayout
+        android:id="@+id/ly_kvml"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="gone" />
+</LinearLayout>

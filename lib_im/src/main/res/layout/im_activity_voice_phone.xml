@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7E7B7F">
+
+    <TextView
+        android:id="@+id/im_voice_phone_called_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="挂断"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/im_voice_phone_called_iv"
+        app:layout_constraintStart_toStartOf="@+id/im_voice_phone_called_iv"
+        app:layout_constraintTop_toBottomOf="@+id/im_voice_phone_called_iv" />
+
+    <ImageView
+        android:id="@+id/im_voice_phone_called_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/im_voice_phone_called" />
+
+    <TextView
+        android:id="@+id/im_voice_phone_call_agree_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="接听"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/im_voice_phone_call_agree_iv"
+        app:layout_constraintStart_toStartOf="@+id/im_voice_phone_call_agree_iv"
+        app:layout_constraintTop_toBottomOf="@+id/im_voice_phone_call_agree_iv" />
+
+    <ImageView
+        android:id="@+id/im_voice_phone_header"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="100dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/im_default" />
+
+    <TextView
+        android:id="@+id/im_voice_phone_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="@+id/im_voice_phone_header"
+        app:layout_constraintStart_toStartOf="@+id/im_voice_phone_header"
+        app:layout_constraintTop_toBottomOf="@+id/im_voice_phone_header"
+        tools:text="山河" />
+
+    <ImageView
+        android:id="@+id/im_voice_phone_call_agree_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:srcCompat="@mipmap/im_voice_phone_call" />
+
+    <ImageView
+        android:id="@+id/im_voice_phone_call_refuse_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/im_voice_phone_called" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/im_voice_phone_call_refuse_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="拒绝"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/im_voice_phone_call_refuse_iv"
+        app:layout_constraintStart_toStartOf="@+id/im_voice_phone_call_refuse_iv"
+        app:layout_constraintTop_toBottomOf="@+id/im_voice_phone_call_refuse_iv" />
+
+    <TextView
+        android:id="@+id/im_voice_phone_called_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="邀请你语音通话"
+        android:textColor="#BBBABA"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/im_voice_phone_name"
+        app:layout_constraintStart_toStartOf="@+id/im_voice_phone_name"
+        app:layout_constraintTop_toBottomOf="@+id/im_voice_phone_name" />
+
+    <TextView
+        android:id="@+id/im_voice_phone_calling_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/im_voice_phone_called_iv"
+        app:layout_constraintEnd_toEndOf="@+id/im_voice_phone_called_iv"
+        app:layout_constraintStart_toStartOf="@+id/im_voice_phone_called_iv" />
+</androidx.constraintlayout.widget.ConstraintLayout>

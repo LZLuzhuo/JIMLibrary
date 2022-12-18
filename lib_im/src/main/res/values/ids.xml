@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="im_id_autolayout" />
+    <item type="id" name="im_keyboard_id_tag_pageset" />
+    <item type="id" name="im_keyboard_id_toolbar_left" />
+    <item type="id" name="im_keyboard_id_toolbar_right" />
+</resources>

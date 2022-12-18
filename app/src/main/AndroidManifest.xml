@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="me.luzhuo.jmessageimdemo">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:name=".MyApplication">
+        <activity android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".IMListActivity" />
+
+
+        <!-- IM -->
+        <activity android:name=".SingleDetailActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="im"
+                    android:path="/single/${applicationId}"
+                    android:scheme="luzhuo" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".GroupDetailActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="im"
+                    android:path="/group/${applicationId}"
+                    android:scheme="luzhuo" />
+            </intent-filter>
+        </activity>
+
+        <!-- IM map -->
+        <activity android:name=".IMMapShowActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="im"
+                    android:path="/map/show/${applicationId}"
+                    android:scheme="luzhuo" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".IMMapSelectActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="im"
+                    android:path="/map/select/${applicationId}"
+                    android:scheme="luzhuo" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

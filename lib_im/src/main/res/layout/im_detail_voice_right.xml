@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    tools:background="@android:color/darker_gray">
+
+    <include layout="@layout/im_layout_detail_time" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/im_detail_header"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/im_default"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/im_detail_content_zone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/im_right_msg_bg"
+            app:layout_constraintEnd_toStartOf="@+id/im_detail_header"
+            app:layout_constraintTop_toTopOf="@+id/im_detail_header">
+
+            <TextView
+                android:id="@+id/im_detail_content_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="225dp"
+                android:paddingEnd="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="9dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingBottom="9dp"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="......" />
+
+            <ImageView
+                android:id="@+id/im_detail_voice_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/im_detail_voice_right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/im_detail_content_text"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/im_detail_voice_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/im_detail_content_text"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="7″" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/im_detail_right_readed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="7dp"
+            android:layout_marginRight="7dp"
+            android:textColor="?attr/colorAccent"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/im_detail_content_zone"
+            app:layout_constraintEnd_toStartOf="@+id/im_detail_content_zone"
+            app:layout_constraintTop_toTopOf="@+id/im_detail_content_zone"
+            tools:text="未读"
+            tools:visibility="visible" />
+
+        <ProgressBar
+            android:id="@+id/im_detail_right_progress"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/im_detail_content_zone"
+            app:layout_constraintEnd_toStartOf="@+id/im_detail_right_readed"
+            app:layout_constraintTop_toTopOf="@+id/im_detail_content_zone"
+            tools:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/im_detail_err"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/im_right_msg_err"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/im_detail_content_zone"
+            app:layout_constraintEnd_toStartOf="@+id/im_detail_right_progress"
+            app:layout_constraintTop_toTopOf="@+id/im_detail_content_zone"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <!-- 分隔线 -->
+    <include layout="@layout/im_common_horizontal_line" />
+
+    <!-- 表情集 -->
+    <me.luzhuo.lib_im.ui.layout.func.EmoticonsFuncView
+        android:id="@+id/view_epv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view_eiv"
+        android:orientation="vertical" />
+
+    <!-- 表情 指示点 -->
+    <me.luzhuo.lib_im.ui.layout.keyboard.EmoticonsIndicatorView
+        android:id="@+id/view_eiv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/view_spit"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/im_keyboard_indicator_margin" />
+
+    <!-- 分隔线 -->
+    <include
+        android:id="@+id/view_spit"
+        layout="@layout/im_common_horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/im_common_spit_width"
+        android:layout_above="@+id/view_etv" />
+
+    <!-- 表情符号 底部工具栏 -->
+    <me.luzhuo.lib_im.ui.layout.keyboard.EmoticonsToolBarView
+        android:id="@+id/view_etv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/im_keyboard_bar_height"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" />
+</RelativeLayout>

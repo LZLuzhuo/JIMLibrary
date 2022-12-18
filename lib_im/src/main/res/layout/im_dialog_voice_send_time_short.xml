@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 语音说话时间太短 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_bg"
+    style="@style/im_dialog_voice_record"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical|center_horizontal"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="136dp"
+        android:layout_height="136dp"
+        android:alpha="0.5"
+        android:background="#000000">
+
+        <ImageView
+            android:id="@+id/jmim_volume_hint_iv"
+            android:layout_width="41dp"
+            android:layout_height="59dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="21.67dp"
+            android:src="@mipmap/im_icon_voice_zero"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="34dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:text="00:00"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="9dp"
+            android:text="说话时间太短"
+            android:textColor="#fff"
+            android:textSize="12sp" />
+    </FrameLayout>
+
+</LinearLayout>

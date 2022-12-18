@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    tools:background="@android:color/darker_gray">
+
+    <include layout="@layout/im_layout_detail_time" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/im_detail_header"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/im_default"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/im_detail_left_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:ems="10"
+            android:singleLine="true"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/im_detail_header"
+            app:layout_constraintTop_toTopOf="@+id/im_detail_header"
+            tools:text="昵称昵称昵称昵称昵称昵称昵称昵称" />
+
+        <ImageView
+            android:id="@+id/im_detail_content_img"
+            android:layout_width="168dp"
+            android:layout_height="225dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/black"
+            android:scaleType="centerCrop"
+            android:src="@drawable/im_default"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@+id/im_detail_header"
+            app:layout_constraintTop_toTopOf="@+id/im_detail_header"
+            tools:src="@drawable/im_default"
+            tools:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/im_detail_err"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/im_right_msg_err"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/im_detail_content_img"
+            app:layout_constraintStart_toEndOf="@+id/im_detail_content_img"
+            app:layout_constraintTop_toTopOf="@+id/im_detail_content_img"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="@+id/im_detail_content_img"
+            app:layout_constraintEnd_toEndOf="@+id/im_detail_content_img"
+            app:layout_constraintStart_toStartOf="@+id/im_detail_content_img"
+            app:layout_constraintTop_toTopOf="@+id/im_detail_content_img"
+            app:srcCompat="@drawable/im_detail_video_play" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
